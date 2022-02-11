@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REC - VAGAS</title>
+
+
+    <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2%;
+
+        }
+
+        .contato {
+            width: 100%;
+            max-width: 500px;
+
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .field {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid white;
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            border: solid 1px gray;
+        }
+
+        .logoREC img {
+
+            width: 30%;
+        }
+
+        .logoREC {
+            text-align: center;
+            margin: 1%;
+            margin-bottom: 2%;
+        }
+
+        /* The grid: Four equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 25%;
+            padding: 10px;
+        }
+
+        /* Style the images inside the grid */
+        .column img {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .column img:hover {
+            opacity: 1;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* The expanding image container (positioning is needed to position the close button and the text) */
+        .container {
+            position: relative;
+            display: none;
+        }
+
+        /* Expanding image text */
+        #imgtext {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: white;
+            font-size: 20px;
+        }
+
+        /* Closable button inside the image */
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+
+        .navBar {
+            text-align: center;
+        }
+
+       
+    </style>
+
+</head>
+
+
+
+<body>
+    <div class="logoREC">
+        <p><img src="img/logoDocRec.jpg" alt=""></p>
+    </div>
+
+    <div class="navBar">
+        <hr>
+        <a href="#vagas">Especificações</a>
+        <hr>
+    </div>
+
+
+    <section class="content">
+
+        <div class="curriculo">
+
+
+            <h3>Envie seu Currículo</h3>
+            <form method="POST" action="vagas.php" enctype="multipart/form-data">
+                <label for="name">Nome</label><br>
+                <input class="field" name="name" placeholder="Nome" required>
+                <br>
+                <label for="email">E-mail</label>
+                <br>
+                <input class="field" name="email" placeholder="E-mail" required>
+
+                <p>Selecione a Vaga</p>
+
+                <div>
+                    <input type="radio" id="almoxarife" name="vaga" value="Almoxarife" required>
+                    <label for="almoxarife">Almoxarife</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="eletricista" name="vaga" value="Eletricista" required>
+                    <label for="eletricista">Eletricista Industrial</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="instrumentista" name="vaga" value="Instrumentista" required>
+                    <label for="instrumentista">Instrumentista</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="projetista" name="vaga" value="Projetista" required>
+                    <label for="projetista Elétrico">Orçamentista/Projetista Elétrico</label>
+                </div>
+
+                <br>
+                <input type="file" class="field" name="arquivo" id="arquivo"
+                    placeholder="Envie seu Curriculo (PDF ou DOC)" required>
+
+
+                <small>Max. 2mb</small>
+                <br>
+
+                <input type="submit" value="Enviar" class="field" style="width: 100%;">
+
+            </form>
+        </div>
+        <br>
+        <br>
+
+
+    </section>
+
+    <section class="vaga" id="vagas">
+        <br>
+        <hr>
+        <!-- The grid: four columns -->
+        <br>
+        <h2 class="tm-text-primary mb-4 tm-section-title" style="text-align: center;">Vagas</h2>
+        <!-- The expanding image container -->
+        <div class="container">
+            <!-- Close the image -->
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+            <!-- Expanded image -->
+            <img id="expandedImg" style="width:100%">
+
+            <!-- Image text -->
+            <div id="imgtext"></div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="/img/ALMOXARIFE.pdf-image-0001.jpg" alt="" width="100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="/img/ELETRICISTA INDUSTRIAL.pdf-image-0001.jpg" alt=" " width="100%"
+                    onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="/img/INSTRUMENTISTA.pdf-image-0001.jpg" alt="" width="100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="/img/ORÇAMENTISTA.pdf-image-0001.jpg" alt="" width="100%" onclick="myFunction(this);">
+            </div>
+        </div>
+
+        <script>function myFunction(imgs) {
+                // Get the expanded image
+                var expandImg = document.getElementById("expandedImg");
+                // Get the image text
+                var imgText = document.getElementById("imgtext");
+                // Use the same src in the expanded image as the image being clicked on from the grid
+                expandImg.src = imgs.src;
+                // Use the value of the alt attribute of the clickable image as text inside the expanded image
+                imgText.innerHTML = imgs.alt;
+                // Show the container element (hidden with CSS)
+                expandImg.parentElement.style.display = "block";
+            }</script>
+
+
+    </section>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
