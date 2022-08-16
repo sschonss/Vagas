@@ -10,7 +10,6 @@ $replyto = $_POST['email']; // Email que será respondido
 $vaga = $_POST['vaga'];
 $assunto = 'Vaga para ' . $vaga;
 
-/* Destinatário e remetente - EDITAR SOMENTE ESTE BLOCO DO CÓDIGO */
 $to = "rh@recautomacao.com.br";
 $remetente = "recmes@recautomacao.com"; // Deve ser um email válido do domínio
 
